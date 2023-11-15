@@ -2,8 +2,8 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
     {
-      "name": "amigoscode-api",
-      "image": "amigoscode/amigoscode-api:20.04.2023.13.39.03",
+      "name": "yyy-api",
+      "image": "yxqnyyy/yyy-api",
       "essential": true,
       "memory": 512,
       "portMappings": [
@@ -14,8 +14,8 @@
       ],
       "environment": [
         {
-          "name": "SPRING_PROFILES_ACTIVE",
-          "value": "test"
+          "name": "SPRING_DATASOURCE_URL",
+          "value": "jdbc:postgresql://awseb-e-jkyi43ab5d-stack-awsebrdsdatabase-xchr0tgrs4ic.c4neaifzgnuq.eu-central-1.rds.amazonaws.com:5432/customer"
         }
       ]
     }
