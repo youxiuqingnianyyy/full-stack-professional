@@ -15,7 +15,7 @@
     },
     {
       "name": "yyy-api",
-      "image": "yxqnyyy/yyy-api:21.11.2023.15.40.05",
+      "image": "yxqnyyy/yyy-api:21.11.2023.16.47.20",
       "essential": true,
       "memory": 512,
       "portMappings": [
