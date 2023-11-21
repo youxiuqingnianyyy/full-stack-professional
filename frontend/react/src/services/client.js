@@ -77,6 +77,6 @@ export const uploadCustomerProfilePicture = async (id, formData) => {
     }
 }
 
-export const customerProfilePictureUrl = (id) =>
+//export const customerProfilePictureUrl = (id) =>
     //`${import.meta.env.VITE_API_BASE_URL}/api/v1/customers/${id}/profile-image`;
-    `https://randomuser.me/api/portraits/${randomGender}/${imageNumber}.jpg`;
+
