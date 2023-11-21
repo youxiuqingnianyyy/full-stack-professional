@@ -10,7 +10,7 @@ on:
 
 jobs:
   deploy:
-    if: false
+    # if: false
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -18,11 +18,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Slack commit message and sha
-        run: >
-          curl -X POST -H 'Content-type: application/json'
-          --data '{"text":":github: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }} - ${{ github.event.head_commit.message }}"}' 
-          ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Set build number
         id: build-number
         run: echo "BUILD_NUMBER=$(date '+%d.%m.%Y.%H.%M.%S')" >> $GITHUB_OUTPUT
