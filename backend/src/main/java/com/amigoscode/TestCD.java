@@ -1,15 +1,15 @@
-package com.amigoscode.security;
+package com.amigoscode;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class TestCDController {
+public class TestCD {
 
-    record TestCD(String test){}
+    record Test(String result) {}
 
     @GetMapping("/test")
-    public TestCD getTestCD() {
-        return new TestCD("Test");
+    public Test getTest() {
+        return new Test("Test");
     }
 }

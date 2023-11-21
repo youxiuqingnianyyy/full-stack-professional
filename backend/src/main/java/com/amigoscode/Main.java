@@ -12,9 +12,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Random;
-import java.util.UUID;
 
 @SpringBootApplication
 public class Main {
@@ -68,4 +69,14 @@ public class Main {
         System.out.println(email);
     }
 
+    @RestController
+    public static class TestCDController {
+
+        record TestCD(String test){}
+
+        @GetMapping("/test")
+        public TestCD getTestCD() {
+            return new TestCD("Test");
+        }
+    }
 }
