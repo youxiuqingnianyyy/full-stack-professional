@@ -2,32 +2,20 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
     {
-      "name": "yyy-react",
-      "image": "yxqnyyy/yyy-react:21.11.2023.18.04.54",
-      "essential": true,
-      "memory": 256,
-      "portMappings": [
-        {
-          "hostPort": 80,
-          "containerPort": 5173
-        }
-      ]
-    },
-    {
       "name": "yyy-api",
       "image": "yxqnyyy/yyy-api:21.11.2023.16.47.20",
       "essential": true,
       "memory": 512,
       "portMappings": [
         {
-          "hostPort": 8080,
+          "hostPort": 80,
           "containerPort": 8080
         }
       ],
       "environment": [
         {
           "name": "SPRING_DATASOURCE_URL",
-          "value": "jdbc:postgresql://awseb-e-jkyi43ab5d-stack-awsebrdsdatabase-xchr0tgrs4ic.c4neaifzgnuq.eu-central-1.rds.amazonaws.com:5432/customer"
+          "value": "jdbc:postgresql://awseb-e-kgrhnwtyva-stack-awsebrdsdatabase-zrpo2k7j9ata.c4neaifzgnuq.eu-central-1.rds.amazonaws.com:5432/ebdb"
         }
       ]
     }
