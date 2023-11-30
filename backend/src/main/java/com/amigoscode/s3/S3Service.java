@@ -13,10 +13,10 @@ import java.io.IOException;
 @Service
 public class S3Service {
 
-    private final S3Client s3;
+    private final S3Client s3Service;
 
-    public S3Service(S3Client s3) {
-        this.s3 = s3;
+    public S3Service(S3Client s3Client) {
+        this.s3Service = s3Client;
     }
 
     public void putObject(String bucketName, String key, byte[] file) {
@@ -24,7 +24,7 @@ public class S3Service {
                 .bucket(bucketName)
                 .key(key)
                 .build();
-        s3.putObject(objectRequest, RequestBody.fromBytes(file));
+        s3Service.putObject(objectRequest, RequestBody.fromBytes(file));
     }
 
     public byte[] getObject(String bucketName, String key) {
@@ -33,7 +33,7 @@ public class S3Service {
                 .key(key)
                 .build();
 
-        ResponseInputStream<GetObjectResponse> res = s3.getObject(getObjectRequest);
+        ResponseInputStream<GetObjectResponse> res = s3Service.getObject(getObjectRequest);
 
         try {
             return res.readAllBytes();

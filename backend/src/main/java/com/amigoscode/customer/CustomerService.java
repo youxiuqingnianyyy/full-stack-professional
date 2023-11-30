@@ -145,6 +145,8 @@ public class CustomerService {
                         "customer with id [%s] not found".formatted(customerId)
                 ));
 
+        // TODO: Check if profileImageId is empty or null
+
         if (StringUtils.isBlank(customer.profileImageId())) {
             throw new ResourceNotFoundException(
                     "customer with id [%s] profile image not found".formatted(customerId));

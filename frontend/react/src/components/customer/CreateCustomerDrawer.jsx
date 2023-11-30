@@ -41,12 +41,12 @@ const CreateCustomerDrawer = ({ fetchCustomers }) => {
                         leftIcon={<CloseIcon/>}
                         colorScheme={"teal"}
                         onClick={onClose}>
-                    Close
+                        Close
                     </Button>
                 </DrawerFooter>
             </DrawerContent>
         </Drawer>
-        </>
+    </>
 
 }
 

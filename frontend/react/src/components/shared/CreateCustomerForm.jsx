@@ -84,13 +84,13 @@ const CreateCustomerForm = ({ onSuccess }) => {
                             )
                             onSuccess(res.headers["authorization"]);
                         }).catch(err => {
-                            console.log(err);
-                            errorNotification(
-                                err.code,
-                                err.response.data.message
-                            )
+                        console.log(err);
+                        errorNotification(
+                            err.code,
+                            err.response.data.message
+                        )
                     }).finally(() => {
-                         setSubmitting(false);
+                        setSubmitting(false);
                     })
                 }}
             >
