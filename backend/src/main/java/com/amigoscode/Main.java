@@ -29,7 +29,7 @@ public class Main {
             PasswordEncoder passwordEncoder) {
         return args -> {
             createRandomCustomer(customerRepository, passwordEncoder);
-            // testBucketUploadAndDownload(s3Service, s3Buckets);
+            //testBucketUploadAndDownload(s3Service, s3Buckets);
         };
     }
 
@@ -37,13 +37,13 @@ public class Main {
                                                     S3Buckets s3Buckets) {
         s3Service.putObject(
                 s3Buckets.getCustomer(),
-                "foo/bar/jamila",
+                "foo/bar/jam",
                 "Hello World".getBytes()
         );
 
         byte[] obj = s3Service.getObject(
                 s3Buckets.getCustomer(),
-                "foo/bar/jamila"
+                "foo/bar/jam"
         );
 
         System.out.println("Hooray: " + new String(obj));
