@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "yyy-api",
-      "image": "yxqnyyy/yyy-api:30.11.2023.15.03.56",
+      "image": "yxqnyyy/yyy-api:01.12.2023.18.58.48",
       "essential": true,
       "memory": 512,
       "portMappings": [
